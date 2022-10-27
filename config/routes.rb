@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   # Routes for the User account:
 
+  #Home
+
+  # get("/", { :controller => "application", :action => "home" })
+
   # SIGN UP FORM
   get("/user_sign_up", { :controller => "user_authentication", :action => "sign_up_form" })        
   # CREATE RECORD
