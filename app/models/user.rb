@@ -14,4 +14,10 @@ class User < ApplicationRecord
   validates :email, :uniqueness => { :case_sensitive => false }
   validates :email, :presence => true
   has_secure_password
+
+  has_many :bookmarks
+#probably don't need this last one..
+  has_many :movies, :through => :bookmarks
+
+
 end

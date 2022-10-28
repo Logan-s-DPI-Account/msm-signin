@@ -28,9 +28,7 @@
       <li>
         <a href="/characters">Characters</a>
       </li>
-        <li>
-        <a href="/bookmarks">Bookmarks</a>
-      </li>
+
       <% if session.fetch(:user_id) == nil %>
         <li>
           <a href="/user_sign_in">Sign in</a>
@@ -39,6 +37,9 @@
           <a href="/user_sign_up">Sign up</a>
         </li>
       <% else #signed in %>
+              <li>
+        <a href="/bookmarks">My bookmarks</a>
+      </li>
         <li>
         <a href="/user_sign_out">Sign out</a>
       </li>
